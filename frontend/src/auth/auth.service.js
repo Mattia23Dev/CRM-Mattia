@@ -1,6 +1,7 @@
 import { API_BASE_URL } from '@/config/serverApiConfig';
 
 import axios from 'axios';
+axios.defaults.withCredentials = true;
 import errorHandler from '@/request/errorHandler';
 import successHandler from '@/request/successHandler';
 
