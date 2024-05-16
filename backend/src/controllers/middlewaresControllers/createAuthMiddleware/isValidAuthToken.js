@@ -15,7 +15,9 @@ const isValidAuthToken = async (req, res, next, { userModel, jwtSecret = 'JWT_SE
         jwtExpired: true,
       });
 
+      console.log(token)
     const verified = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(verified)
     //const verified = jwt.verify(token, process.env[jwtSecret]);
 
     if (!verified)
