@@ -11,7 +11,7 @@ const roles = {
 };
 exports.roles = roles;
 
-exports.hasPermission = (permissionName = 'none') => {
+exports.hasPermission = (permissionName) => {
   return function (req, res, next) {
     const currentUserRole = req.admin.role;
 
