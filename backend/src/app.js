@@ -28,7 +28,7 @@ app.use(cors({
       callback(new Error('CORS policy violation'), false);
     }
   },
-  credentials: true
+  credentials: false
 }));
 
 app.use(cookieParser());
