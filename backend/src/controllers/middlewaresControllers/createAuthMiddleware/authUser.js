@@ -1,3 +1,4 @@
+require('dotenv').config({ path: '.env' });
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -17,7 +18,7 @@ const authUser = async (req, res, { user, databasePassword, password, UserPasswo
         id: user._id,
       },
       process.env.JWT_SECRET,
-      { expiresIn: req.body.remember ? 365 * 24 + 'h' : '24h' }
+      {}
     );
 
     await UserPasswordModel.findOneAndUpdate(
@@ -31,11 +32,11 @@ const authUser = async (req, res, { user, databasePassword, password, UserPasswo
     res
       .status(200)
       .cookie('token', token, {
-        maxAge: req.body.remember ? 365 * 24 * 60 * 60 * 1000 : null,
+        maxAge: req.body.remember ? 365 * 24 * 60 * 60 * 1000 : 24 * 60 * 60 * 1000 * 365,
         sameSite: 'Lax',
         httpOnly: true,
         secure: false,
-        domain: req.hostname,
+        domain: process.env.NODE_ENV === "production" ? 'salesystem-funnel.netlify.app' : req.hostname,
         path: '/',
         Partitioned: true,
       })
