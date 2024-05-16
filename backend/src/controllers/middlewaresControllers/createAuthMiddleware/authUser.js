@@ -33,10 +33,11 @@ const authUser = async (req, res, { user, databasePassword, password, UserPasswo
       .status(200)
       .cookie('token', token, {
         maxAge: req.body.remember ? 365 * 24 * 60 * 60 * 1000 : 24 * 60 * 60 * 1000 * 365,
-        sameSite: 'Lax',
+        sameSite: 'None',
         httpOnly: false,
-        secure: false,
+        secure: true,
         //domain: process.env.NODE_ENV === "production" ? '.salesystem-funnel.netlify.app' : req.hostname,
+        domain: '.salesystem-funnel.netlify.app',
         path: '/',
         Partitioned: true,
       })
