@@ -18,17 +18,15 @@ const fileUpload = require('express-fileupload');
 // create our Express app
 const app = express();
 
-const allowedDomains = ['https://salesystem-funnel.netlify.app', 'http://localhost:3000'];
-
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    
-    if (allowedDomains.indexOf(origin) === -1) {
-      var msg = 'Il CORS per questo sito non permette l\'accesso da questa origine.';
-      return callback(new Error(msg), false);
+    const allowedOrigins = ['https://salesystem-funnel.netlify.app'];
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS policy violation'), false);
     }
-    return callback(null, true);
   },
   credentials: true
 }));
