@@ -37,7 +37,7 @@ const authUser = async (req, res, { user, databasePassword, password, UserPasswo
         httpOnly: false,
         secure: true,
         //domain: process.env.NODE_ENV === "production" ? '.salesystem-funnel.netlify.app' : req.hostname,
-        domain: '.netlify.app',
+        domain: 'mattianoris.online',
         path: '/',
         Partitioned: true,
       })
