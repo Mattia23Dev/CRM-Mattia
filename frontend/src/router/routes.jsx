@@ -88,14 +88,14 @@ let routes = {
       path: '/company',
       element: <Company />,
     },
-    {
-      path: '/product',
-      element: <Product />,
-    },
-    {
-      path: '/category/product',
-      element: <ProductCategory />,
-    },
+    // {
+    //   path: '/product',
+    //   element: <Product />,
+    // },
+    // {
+    //   path: '/category/product',
+    //   element: <ProductCategory />,
+    // },
     {
       path: '/inventory',
       element: <Inventory />,
@@ -104,58 +104,58 @@ let routes = {
       path: '/order',
       element: <Order />,
     },
-    {
-      path: '/invoice',
-      element: <Invoice />,
-    },
-    {
-      path: '/invoice/create',
-      element: <InvoiceCreate />,
-    },
-    {
-      path: '/invoice/read/:id',
-      element: <InvoiceRead />,
-    },
-    {
-      path: '/invoice/update/:id',
-      element: <InvoiceUpdate />,
-    },
-    {
-      path: '/invoice/pay/:id',
-      element: <InvoiceRecordPayment />,
-    },
-    {
-      path: '/quote',
-      element: <Quote />,
-    },
-    {
-      path: '/quote/create',
-      element: <QuoteCreate />,
-    },
-    {
-      path: '/quote/read/:id',
-      element: <QuoteRead />,
-    },
-    {
-      path: '/quote/update/:id',
-      element: <QuoteUpdate />,
-    },
-    {
-      path: '/payment',
-      element: <Payment />,
-    },
-    {
-      path: '/payment/read/:id',
-      element: <PaymentRead />,
-    },
-    {
-      path: '/payment/update/:id',
-      element: <PaymentUpdate />,
-    },
-    {
-      path: '/employee',
-      element: <Employee />,
-    },
+    // {
+    //   path: '/invoice',
+    //   element: <Invoice />,
+    // },
+    // {
+    //   path: '/invoice/create',
+    //   element: <InvoiceCreate />,
+    // },
+    // {
+    //   path: '/invoice/read/:id',
+    //   element: <InvoiceRead />,
+    // },
+    // {
+    //   path: '/invoice/update/:id',
+    //   element: <InvoiceUpdate />,
+    // },
+    // {
+    //   path: '/invoice/pay/:id',
+    //   element: <InvoiceRecordPayment />,
+    // },
+    // {
+    //   path: '/quote',
+    //   element: <Quote />,
+    // },
+    // {
+    //   path: '/quote/create',
+    //   element: <QuoteCreate />,
+    // },
+    // {
+    //   path: '/quote/read/:id',
+    //   element: <QuoteRead />,
+    // },
+    // {
+    //   path: '/quote/update/:id',
+    //   element: <QuoteUpdate />,
+    // },
+    // {
+    //   path: '/payment',
+    //   element: <Payment />,
+    // },
+    // {
+    //   path: '/payment/read/:id',
+    //   element: <PaymentRead />,
+    // },
+    // {
+    //   path: '/payment/update/:id',
+    //   element: <PaymentUpdate />,
+    // },
+    // {
+    //   path: '/employee',
+    //   element: <Employee />,
+    // },
     {
       path: '/admin',
       element: <Admin />,
@@ -168,10 +168,10 @@ let routes = {
       path: '/settings/edit/:settingsKey',
       element: <Settings />,
     },
-    {
-      path: '/payment/mode',
-      element: <PaymentMode />,
-    },
+    // {
+    //   path: '/payment/mode',
+    //   element: <PaymentMode />,
+    // },
     {
       path: '/taxes',
       element: <Taxes />,
@@ -221,14 +221,14 @@ let routes = {
       path: '/offer/update/:id',
       element: <OfferUpdate />,
     },
-    {
-      path: '/expenses',
-      element: <Expense />,
-    },
-    {
-      path: 'category/expenses',
-      element: <ExpenseCategory />,
-    },
+    // {
+    //   path: '/expenses',
+    //   element: <Expense />,
+    // },
+    // {
+    //   path: 'category/expenses',
+    //   element: <ExpenseCategory />,
+    // },
     {
       path: '*',
       element: <NotFound />,
