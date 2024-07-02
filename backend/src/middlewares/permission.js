@@ -9,6 +9,7 @@ const roles = {
   create_only: ['create', 'read', 'download', 'upload'],
   read_only: ['read', 'download'],
 };
+
 exports.roles = roles;
 
 exports.hasPermission = (permissionName) => {
